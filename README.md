@@ -1,6 +1,4 @@
 # task6.12
-
-Задача 4
 ![Screenshot_1](https://user-images.githubusercontent.com/90615038/146990847-51baa265-fbce-4955-81d7-39401e452d53.png)
 
 Циклы, ряды.
