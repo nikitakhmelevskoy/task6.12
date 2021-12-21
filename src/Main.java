@@ -5,14 +5,20 @@ public class Main {
     public static void main(String[] args) {
 
         double x = readNum("Enter x = ");
-        isXMatchInterval(x);
+        if (isXMatchInterval(x)) {
+            System.out.println("Enter the correct spacing (-R,R) : (-1 < x < 1)");
+            return;
+        }
 
         int n = (int) readNum("Enter n = ");
-        isNPositive(n);
+        if (isNPositive(n)) {
+            System.out.println("Enter n > 0");
+            return;
+        }
 
-        double e = readNum("Enter e = ");
+        double epsilon = readNum("Enter epsilon = ");
 
-        printResults(x,n,e);
+        printResults(x, n, epsilon);
 
     }
 
@@ -22,18 +28,12 @@ public class Main {
         return scn.nextDouble();
     }
 
-    static void isXMatchInterval(double num) {
-        if (num <= -1 || num >= 1) {
-            System.out.print("Enter the correct spacing (-R,R) : (-1 < x < 1)");
-            System.exit(1);
-        }
+    static boolean isXMatchInterval(double num) {
+        return (num <= -1 || num >= 1);
     }
 
-    static void isNPositive(double num) {
-        if (num < 0) {
-            System.out.print("Enter n > 0");
-            System.exit(1);
-        }
+    static boolean isNPositive(double num) {
+        return (num < 0);
     }
 
     static double nextTerm(double last, int i, double x) {
