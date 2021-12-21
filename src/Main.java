@@ -33,7 +33,7 @@ public class Main {
     }
 
     static boolean isNPositiveAndInteger(double num) {
-        return (num > 0 && num % 1 == 0);
+        return (num < 0 && ( num % 2 != 0 && num % 2 != 0));
     }
 
     static double nextTerm(double last, int i, double x) {
