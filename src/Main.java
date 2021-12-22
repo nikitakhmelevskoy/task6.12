@@ -11,8 +11,8 @@ public class Main {
         }
 
         int n = (int) readNum("Enter n = ");
-        if (isNPositiveAndInteger(n)) {
-            System.out.println("Enter n > 0 and Integer");
+        if (isNPositive(n)) {
+            System.out.println("Enter n > 0");
             return;
         }
 
@@ -32,8 +32,8 @@ public class Main {
         return (num <= -1 || num >= 1);
     }
 
-    static boolean isNPositiveAndInteger(int num) {
-        return !(num > 0 && num % 1 == 0);
+    static boolean isNPositive(int num) {
+        return !(num > 0);
     }
 
     static double nextTerm(double previous, int i, double x) {
